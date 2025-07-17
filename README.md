@@ -1,7 +1,7 @@
 ### SETUP INSTRUCTION:- (First install all the dependencies and dev dependencies)
 ### npm init -y
-### npm i body-parser concurrently cors dotenv drizzle-orm express helmet morgan nodemailer nodemon pg zod @types/nodemailer
-### npm i -D drizzle-kit ts-node tsx typescript @types/express @types/node @types/pg
+### npm i body-parser concurrently cors dotenv drizzle-orm express helmet morgan nodemailer nodemon pg zod @types/nodemailer jsonwebtoken
+### npm i -D drizzle-kit ts-node tsx typescript @types/express @types/node @types/pg @types/jsonwebtoken
 
 
 ### In this project i have implemented a simple CRUD without authentication for user and have managed the event part as per the instructions given.

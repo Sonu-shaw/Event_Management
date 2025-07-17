@@ -2,8 +2,14 @@ import { boolean, integer, pgTable, timestamp, varchar } from "drizzle-orm/pg-co
 
 export const usersTable = pgTable("users", {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  name:varchar({ length: 25 }).notNull(),
   username: varchar({ length: 25 }).notNull().unique(),
   email: varchar({ length: 128 }).notNull().unique(),
+  password: varchar({ length: 100 }).notNull(),
+  // role: varchar({ length: 5,enum: ["admin","user"]}).$default(()=>"user"),
+  otp: varchar({ length: 6 }), // or however your OTP is formatted
+  otpGeneratedTime: timestamp(),
+  isActive: boolean().default(false),
 });
 export const eventsTable = pgTable("event", {
   id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
